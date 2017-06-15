@@ -14,9 +14,7 @@ program
 program
     .command('create [dir]')
     .description('创建一个空的博客')
-    .action(function (dir) {
-        console.log('create %s', dir);
-    });
+    .action(require('../lib/cmd_create'));
 
 program
     .command('preview [dir]')
@@ -27,8 +25,6 @@ program
     .command('build [dir]')
     .description('生成整站静态HTML')
     .option('-o, --output <dir>', '生成的静态HTML存放目录')
-    .action(function (dir, options) {
-        console.log('create %s, output %s', dir, options.output);
-    });
+    .action(require('../lib/cmd_build'));
 
 program.parse(process.argv);
