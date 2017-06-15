@@ -19,7 +19,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "express": "^4.15.3",
-    "markdown-it": "^8.3.1"
+    "markdown-it": "^8.3.1",
+    "swig": "^1.4.2"
   },
   "bin": {
     "blog": "./bin/myblog.js"
